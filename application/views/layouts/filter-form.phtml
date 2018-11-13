@@ -1,0 +1,31 @@
+<form action=<?=$siteSections['catalogue'];?> method="get">
+    <div id = "transType" class="select">
+        <span class="current"><?=$currentTransType['text']?></span>
+        <input type="hidden"
+                required
+                name="transType"
+                value="<?=$currentTransType['value']?>"/>
+        <ul>
+            <?php echo $transStr;?>
+        </ul>
+    </div>
+    <div id = "wheelDiam" class="select">
+        <span class="current"><?=$currentWheelDiam['text']?></span>
+        <input type="hidden"
+                name="wheelDiam"
+                value="<?=$currentWheelDiam['value']?>"/>
+        <ul>
+            <?php echo $diamStr;?>
+        </ul>
+    </div>
+    <div id = "tyreSize" class="select">
+        <span class="current"><?=$currentTyreSize['text']?></span>
+        <input type="hidden"
+                name="tyreSize"
+                value="<?=$currentTyreSize['value']?>"/>
+        <ul>
+            <?php echo $tyreStr;?>
+        </ul>
+    </div>
+    <input type="submit" value="Найти в каталоге"/>
+</form>

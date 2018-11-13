@@ -1,0 +1,21 @@
+
+<?php require_once APPLICATION_PATH . "/views/layouts/call-me-form.phtml";?>
+<?php require_once APPLICATION_PATH . "/views/layouts/send-brochure.phtml";?>
+
+<section class="section">
+    <div class="catalog">
+        <div class="content">
+            <div class="cat_top">
+                <h2>Каталог крупногабаритных <br> шин MICHELIN</h2>
+                <div class="catalog_filter clearfix">
+                    <?php require_once APPLICATION_PATH . "/views/layouts/filter-form.phtml";?>
+                </div>
+            </div>
+            <div class="catalog_main clearfix">
+                <?php foreach ($catalog as $key => $item): ?>
+                    <?php require APPLICATION_PATH . "/views/tyre-item.phtml"; ?>
+                <?php endforeach;?>
+            </div>
+        </div>
+    </div>
+</section>

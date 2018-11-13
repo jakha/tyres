@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro Light Cnd';
+    src: url('../fonts/AkzidenzGroteskPro-LightCn.eot');
+    src: url('../fonts/AkzidenzGroteskPro-LightCn.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AkzidenzGroteskPro-LightCn.woff2') format('woff2'),
+    url('../fonts/AkzidenzGroteskPro-LightCn.woff') format('woff'),
+    url('../fonts/AkzidenzGroteskPro-LightCn.ttf') format('truetype'),
+    url('../fonts/AkzidenzGroteskPro-LightCn.svg#AkzidenzGroteskPro-LightCn') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro';
+    src: url('../fonts/AkzidenzGroteskPro-Bold.eot');
+    src: url('../fonts/AkzidenzGroteskPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AkzidenzGroteskPro-Bold.woff2') format('woff2'),
+    url('../fonts/AkzidenzGroteskPro-Bold.woff') format('woff'),
+    url('../fonts/AkzidenzGroteskPro-Bold.ttf') format('truetype'),
+    url('../fonts/AkzidenzGroteskPro-Bold.svg#AkzidenzGroteskPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro';
+    src: url('../fonts/AkzidenzGroteskPro-Regular.eot');
+    src: url('../fonts/AkzidenzGroteskPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AkzidenzGroteskPro-Regular.woff2') format('woff2'),
+    url('../fonts/AkzidenzGroteskPro-Regular.woff') format('woff'),
+    url('../fonts/AkzidenzGroteskPro-Regular.ttf') format('truetype'),
+    url('../fonts/AkzidenzGroteskPro-Regular.svg#AkzidenzGroteskPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro Super';
+    src: url('../fonts/AkzidenzGroteskPro-Super.eot');
+    src: url('../fonts/AkzidenzGroteskPro-Super.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AkzidenzGroteskPro-Super.woff2') format('woff2'),
+    url('../fonts/AkzidenzGroteskPro-Super.woff') format('woff'),
+    url('../fonts/AkzidenzGroteskPro-Super.ttf') format('truetype'),
+    url('../fonts/AkzidenzGroteskPro-Super.svg#AkzidenzGroteskPro-Super') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$light: 'Akzidenz-Grotesk Pro Light Cnd';
+$font: 'Akzidenz-Grotesk Pro';
+$super: 'Akzidenz-Grotesk Pro Super';

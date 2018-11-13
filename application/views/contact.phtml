@@ -1,0 +1,65 @@
+<section class="section">
+    <div class="contact clearfix">
+        <div class="left clearfix">
+            <div class="cont_block">
+                <h4>Контактная <br> информация</h4>
+                <ul class="clearfix">
+                    <li>
+                        <img src="/images/teb_blue.svg" alt="">
+                        <div>
+                            <span>Позвоните нам</span>
+                            <p>
+                                <a href="tel:+7 495 532 11 22">+7 495 532 11 22</a>
+                            </p>
+                            <p>
+                                <a href="tel:+7 936 000 01 33">+7 936 000 01 33</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="/images/email_blue.svg" alt="">
+                        <div>
+                            <span>Напишите нам</span>
+                            <a href="mailto:info@r-group-tyres.com">info@r-group-tyres.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="/images/loc_blue.svg" alt="">
+                        <div>
+                            <span>Посетите нас</span>
+                            <p>Волоколамское шоссе, 73, <br>
+                                Москва, Россия <br>
+                                ПН-ПТ (09:00-18:00)</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div id="map"></div>
+        </div>
+    </div>
+</section>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSlBSf0wYdVcJuxw11YfVUTRr_sQdNWK4&callback=initMap" type="text/javascript"></script>
+<script>
+    function initMap() {
+        var myLatLng = {
+            lat: 55.824801,
+            lng: 37.429460
+        };
+        var centerLng = {
+            lat: 55.824801,
+            lng: 37.429460
+        };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            scrollwheel: false,
+            center: centerLng,
+        });
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+        });
+    }
+    initMap();
+</script>

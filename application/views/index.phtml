@@ -1,0 +1,73 @@
+<div id="main">
+    <div id="main_slider" class="owl-carousel owl-theme">
+        <div class="item" style="background-image: url('/images/slide1.jpg')">
+            <div class="item_cont">
+                <h2>Крупногабаритные <br> шины MICHELIN <br> <p>Повысьте производительность Вашего предприятия</p></h2>
+                <a href=<?=$siteSections['catalogue'];?>>Перейти в каталог</a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('/images/slide2.jpg')">
+            <div class="item_cont">
+                <h2>MICHELIN <br> XDR3 <br> <p>Инновационная шина для жесткорамных самосвалов</p></h2>
+                <a href="<?=$siteSections['catalogue'];?>/MICHELIN_XDR3">Подробнее о шине</a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('/images/slide3.jpg')">
+            <div class="item_cont">
+                <h2>MICHELIN <br> XTRA LOAD GRIP <br> <p>Отличные тяговые свойства на рыхлых грунтах</p></h2>
+                <a href="<?=$siteSections['catalogue'];?>/MICHELIN_XTRA_LOAD_GRIP">
+                    Подробнее о шине</a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('/images/slide4.jpg')">
+            <div class="item_cont">
+                <h2>MICHELIN <br> XDR250 <br> <p>Для самосвала грузоподъемностью 250 тонн</p></h2>
+                <a href="<?=$siteSections['catalogue'];?>/MICHELIN_XDR250">
+                    Подробнее о шине</a>
+            </div>
+        </div>
+    </div>
+    <div class="slide-progress"></div>
+    <div class="main_form">
+        <div class="top">
+            <h6>Выберите подходящую шину</h6>
+            <?php require_once APPLICATION_PATH . "/views/layouts/filter-form.phtml"; ?>
+        </div>
+        <div class="bot">
+            <h6>Получите Каталог на почту</h6>
+            <?php require_once APPLICATION_PATH . "/views/layouts/email-send-form.phtml";?>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="/js/owl.carousel.min.js"></script>
+<script>
+    initSlider();
+
+    function initSlider() {
+        $("#main_slider").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            onInitialized: startProgressBar,
+            onTranslate: resetProgressBar,
+            onTranslated: startProgressBar
+        });
+    }
+
+    function startProgressBar() {
+        // apply keyframe animation
+        $(".slide-progress").css({
+            width: "100%",
+            transition: "width 5000ms"
+        });
+    }
+
+    function resetProgressBar() {
+        $(".slide-progress").css({
+            width: 0,
+            transition: "width 0s"
+        });
+    }
+</script>

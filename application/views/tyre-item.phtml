@@ -1,0 +1,36 @@
+<div class="catalog_item">
+    <img src="/images/<?=$key?>.png" alt="">
+    <div class="catalog_text">
+        <h4>
+            <?= $key;?>
+        </h4>
+        <p><?= $item['description'];?></p>
+        <table>
+            <tr class="top">
+                <td>Типоразмер <br> шины </td>
+                <td>Код <br> TRA</td>
+                <td>Индекс <br> прочности</td>
+            </tr>
+            <?php foreach ($item['sizes'] as $value): ?>
+                <tr>
+                    <td><?=$value['standard_size'];?></td>
+                    <td><?=$value['code_tra'];?></td>
+                    <td><?=$value['strength_index'];?></td>
+                </tr>
+            <?php endforeach;?>
+        </table>
+    </div>
+    <div class="btns">
+        <a href="<?=$siteSections['catalogue'];?>/MICHELIN_<?= str_replace(' ','_',$key);?>" class="more_btn">
+            Подробнее о шине
+        </a>
+        <span>
+            <a href="#callMeForm" class="pop_btn">Отправить запрос</a>
+        </span>
+        <span>
+            <a href="#sendBrochure" data-pattern="<?= $key;?>" class="pop_btn">Получить брошюру</a>
+        </span>
+    </div>
+</div>
+<?php require_once APPLICATION_PATH . "/views/layouts/call-me-form.phtml";?>
+<?php require_once APPLICATION_PATH . "/views/layouts/send-brochure.phtml";?>

@@ -1,0 +1,64 @@
+<section class="section">
+    <div class="content tire_content">
+        <div class="tire_main">
+            <div class="tire tire1">
+                <div class="back_btn">
+                    <a href="<?=$siteSections['catalogue']?>">
+                        Назад в каталог
+                    </a>
+                </div>
+                <img src="/images/<?=$treads['name'];?>.png" alt="" class="tire_img">
+                <h4>
+                    Шина MICHELIN <?=$treads['name'];?>
+                </h4>
+                <p><?= $treads['description'];?></p>
+                <div class="btns">
+                    <a href="#callMeForm" class="pop_btn">Отправить запрос</a>
+                    <a href="#sendBrochure"
+                        data-pattern="<?= $treads['name'];?>"
+                        class="pop_btn">
+                        Получить брошюру
+                    </a>
+                </div>
+                <div class="tire_info clearfix">
+                    <?php foreach ($treads['chars'] as $char): ?>
+                        <div class="tire_info_item">
+                            <span><?=$char['headline'];?></span>
+                            <ul>
+                                <li><?=$char['characteristic'];?></li>
+                            </ul>
+                        </div>
+                    <?php endforeach;?>
+                </div>
+            </div>
+        </div>
+        <div class="tire_table">
+            <table>
+                <tr class="top">
+                    <td>Типоразмеры шины</td>
+                    <td>Код TRA</td>
+                    <td>Индекс прочности</td>
+                    <td>Глубина протектора</td>
+                    <td>Показатель ТКВЧ</td>
+                    <td>Макс. дистан. в час</td>
+                    <td>Макс. скорость</td>
+                    <td>Макс. нагрузка</td>
+                </tr>
+                <?php foreach ($treads['sizes'] as $value): ?>
+                    <tr>
+                        <td><?=$value['standard_size'];?></td>
+                        <td><?=$value['code_tra'];?></td>
+                        <td><?=$value['strength_index'];?></td>
+                        <td><?=$value['tread_depth'];?></td>
+                        <td><?=$value['tkh'];?></td>
+                        <td><?=$value['max_distance_per_hour'];?></td>
+                        <td><?=$value['max_distance'];?></td>
+                        <td><?=$value['max_burden'];?></td>
+                    </tr>
+                <?php endforeach;?>
+            </table>
+        </div>
+    </div>
+</section>
+<?php require_once APPLICATION_PATH . "/views/layouts/call-me-form.phtml";?>
+<?php require_once APPLICATION_PATH . "/views/layouts/send-brochure.phtml";?>

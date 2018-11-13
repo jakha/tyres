@@ -1,0 +1,10 @@
+{
+    "index":"/",
+    "catalogue":"/catalogue",
+    "company":"/company",
+    "contacts":"/contacts",
+    "backoffice":"/backoffice",
+    "privacy":"/privacy_policy",
+    "sendMail":"/send-mail",
+    "callMe":"/call-me"
+}

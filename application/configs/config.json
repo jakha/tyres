@@ -1,0 +1,24 @@
+{
+    "db":{
+        "dbhost": "localhost",
+        "dbuser": "",
+        "dbpassword": "",
+        "dbname": ""
+    },
+    "sendLetter":{
+        "defaultText":{
+            "letterTextPath": "/application/configs/letterText.html",
+            "subject": "Крупногабаритные шины MICHELIN."
+        }
+    },
+    "SMTP":{
+        "host":"ssl://smtp.yandex.ru",
+        "port":"465",
+        "account":"",
+        "password":""
+    },
+    "notify":{
+        "subject":"notify",
+        "text":"Перезвоните мне пожалуйста. Мое имя: %s, телефон: %s, почта: %s"
+    }
+}
